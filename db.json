@@ -1,0 +1,55 @@
+{
+ "courses":[
+   {
+    "title":"Class 11",
+    "entrance":"JEE",
+    "image":""
+   },
+   {
+    "title":"Class 12",
+    "entrance":"JEE",
+    "image":""
+   },
+   {
+    "title":"Class 11",
+    "entrance":"NEET",
+    "image":""
+   },
+   {
+    "title":"Class 12",
+    "entrance":"NEET",
+    "image":""
+   },
+   {
+    "title":"Class 11",
+    "entrance":"CET",
+    "image":""
+   },
+   {
+    "title":"Class 12",
+    "entrance":"CET",
+    "image":""
+   },
+   {
+    "title":"Drop Out",
+    "entrance":"JEE",
+    "image":""
+   },
+   {
+    "title":"Drop Out",
+    "entrance":"NEET",
+    "image":""
+   },
+   {
+    "title":"Test-Series",
+    "entrance":"NEET",
+    "image":""
+   },
+   {
+    "title":"Test-Series",
+    "entrance":"JEE",
+    "image":""
+   }
+
+ ]
+}

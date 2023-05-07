@@ -1,11 +1,45 @@
-import { Flex,Box,Image,Link,Button} from "@chakra-ui/react"
+import { Flex,Box,Image,Button} from "@chakra-ui/react"
 import logo from "../Images/Achievers_Avenue__1_-removebg-preview.png"
-import { BrowserRouter as Router,NavLink as RouterLink } from "react-router-dom"
+// import { BrowserRouter as Router,NavLink as RouterLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
+import styles from "./Navbar.module.css"
+
+const links=[
+  {
+    to:"/",
+    label:"About Us"
+  },
+  {
+    to:"/results",
+    label:"Results"
+  },
+  {
+    to:"/courses",
+    label:"Course"
+  },
+  {
+    to:"/lectures",
+    label:"Lectures"
+  },
+  {
+    to:"/blogs",
+    label:"Blogs"
+  },
+  {
+    to:"/contact",
+    label:"Contact Us"
+  }
+]
+
+
+
+
 
 function Navbar(){
+  const navigate=useNavigate()
  return(
  <Flex alignItems="center" >
-    <Box marginTop="50px" marginLeft="20px" >
+    <Box marginTop="25px" marginLeft="20px" >
     <Image
     width="170px"
     height="90px"
@@ -16,8 +50,8 @@ function Navbar(){
   
     </Box>
     
-     <Box marginTop="50px"   width="800px" >
-        <Router>
+     <Box marginTop="50px" marginLeft="140px"  width="630px"display="flex" justifyContent="space-evenly" >
+        {/* <Router>
       <Link as={RouterLink} to="/" marginLeft='200' _hover='none'  fontWeight='semibold' _activeLink={{fontWeight:"bold"}}>About Us</Link>
       
       <Link as={RouterLink} to="/results" marginLeft='10' _hover='none'  fontWeight='semibold' _activeLink={{fontWeight:"bold"}}>Results</Link>
@@ -30,9 +64,15 @@ function Navbar(){
 
       <Link as={RouterLink} to="/contactus" marginLeft='10' _hover='none'  fontWeight='semibold' _activeLink={{fontWeight:"bold"}}>Contact Us</Link>
 
-      </Router>
+      </Router> */}
+
+      {links.map((link)=>(
+        <NavLink key={link.to} to={link.to} className={({isActive})=>{
+          return isActive?styles.active:styles.default
+        }}>{link.label}</NavLink>
+      ))}
      </Box>
-     <Button  marginTop="50px" width='125px' bgColor="#376ed5" color="white" height="45px" marginLeft="20px">Sign in</Button>
+     <Button  marginTop="50px" width='125px' bgColor="#376ed5" color="white" height="45px" marginLeft="50px" borderRadius="10px" onClick={()=>navigate("/signup")} _hover={{bg: 'blue.500', }}>Sign in</Button>
  </Flex> 
  
  )
