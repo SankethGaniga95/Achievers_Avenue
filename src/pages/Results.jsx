@@ -1,3 +1,4 @@
+import { AspectRatio } from '@chakra-ui/react'
 
 
 
@@ -5,7 +6,7 @@
 function Results(){
     return(
         <>
-        Results
+
         </>
     )
     }

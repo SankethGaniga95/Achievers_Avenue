@@ -1,6 +1,8 @@
 import CourseCard from "../components/CourseCard"
-import { Container, Heading,Text,Box,Button } from "@chakra-ui/react"
+import { Container, Heading,Text,Box,Button, Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
+import { SimpleGrid } from "@chakra-ui/react"
+import { useNavigate } from "react-router-dom"
 
 const getData=()=>{
     return fetch(`http://localhost:8080/courses`).then((res)=>res.json())
@@ -10,6 +12,7 @@ const getData=()=>{
 
 function Courses(){
    const [data,setData]=useState([])
+   const navigate=useNavigate()
 
 
    const fetchAndUpdate=async()=>{
@@ -24,17 +27,28 @@ function Courses(){
  useEffect(()=>{
     fetchAndUpdate()
  },[])
-
+ 
     return(
         <>
         <Container maxWidth="1200px">
          <Box >
+        <Card>
+        <CardHeader>
          <Heading>For offline classes:</Heading>
-         <Text>You can visit our Closest Centres</Text>
-         <Button variant='solid' colorScheme='blue' padding="20px">Know More</Button>
+        </CardHeader>
+        <CardBody>
+         <Text>You can visit our Nearest Centre!</Text>
+        </CardBody>
+        <CardFooter>
+         <Button variant='solid' colorScheme='blue' padding="20px" onClick={()=>navigate("/contact")}>Know More</Button>
+        </CardFooter>
+
+        </Card>
          </Box>
          <Heading>Online Course</Heading>
+         <SimpleGrid columns={[1, 2, 3]} spacing='40px'>
         {data.map((item,idx)=><CourseCard key={idx+1} {...item}/>)}
+         </SimpleGrid>
         </Container>   
         </>
     )
