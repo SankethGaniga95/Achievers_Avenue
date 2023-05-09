@@ -1,38 +1,51 @@
-import { Card, CardBody, CardFooter,Image,Stack,Heading,Text,Button } from '@chakra-ui/react'
+import { Card, CardBody, CardFooter,Image,Stack,Heading,Text,Button,Divider,ButtonGroup,Box } from '@chakra-ui/react'
+import { useNavigate } from 'react-router-dom'
 
 
 
-function CourseCard({title,entrance}){
+function CourseCard({id,title,entrance,image,price,rating}){
+  const navigate=useNavigate()
     return(
         <>
-              <Card
-  direction={{ base: 'column', sm: 'row' }}
-  overflow='hidden'
-  variant='outline'
- marginTop="15px"
- marginBottom="10px">
-  <Image
-    objectFit='cover'
-    maxW={{ base: '100%', sm: '200px' }}
-    src='https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60'
-    alt='Caffe Latte'
-  />
-
-  <Stack>
-    <CardBody>
+        
+        <Card maxW='sm'>
+  <CardBody>
+    <Image
+      src={image}
+      alt='Green double couch with wooden legs'
+      borderRadius='lg'
+      objectFit="contain"
+    />
+    <Stack mt='6' spacing='3'>
       <Heading size='md'>{title}</Heading>
-
-      <Text py='2'>
-      Course: {entrance}
+      <Text>
+    Course:{entrance}
       </Text>
-    </CardBody>
+      <Box display={'flex'}>
+      <Text color='blue.600' fontSize='2xl'>
+      Rating:{rating} 
+      </Text>
+      <img src="https://media.istockphoto.com/id/1069729858/vector/five-point-star-rating-icon.jpg?s=612x612&w=0&k=20&c=qjMq2RrfahWPP2EqPlUnq4BIB1vJrpviq0a5WgPJMa8=" alt="" width="40px" />
+      
 
-    <CardFooter>
-      <Button variant='solid' colorScheme='blue'>
-        Explore
+      </Box>
+      
+      <Text color='blue.600' fontSize='2xl' fontWeight='bold'>
+      ₹{price}
+      </Text>
+    </Stack>
+  </CardBody>
+  <Divider />
+  <CardFooter>
+    <ButtonGroup spacing='2'>
+      <Button variant='solid' colorScheme='blue' onClick={()=>navigate(`/courses/${id}`)}>
+      Know More
       </Button>
-    </CardFooter>
-  </Stack>
+      <Button variant='ghost' colorScheme='blue'>
+        Add to cart
+      </Button>
+    </ButtonGroup>
+  </CardFooter>
 </Card>
         </>
     )

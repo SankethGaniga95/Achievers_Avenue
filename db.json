@@ -1,55 +1,132 @@
 {
- "courses":[
-   {
-    "title":"Class 11",
-    "entrance":"JEE",
-    "image":""
-   },
-   {
-    "title":"Class 12",
-    "entrance":"JEE",
-    "image":""
-   },
-   {
-    "title":"Class 11",
-    "entrance":"NEET",
-    "image":""
-   },
-   {
-    "title":"Class 12",
-    "entrance":"NEET",
-    "image":""
-   },
-   {
-    "title":"Class 11",
-    "entrance":"CET",
-    "image":""
-   },
-   {
-    "title":"Class 12",
-    "entrance":"CET",
-    "image":""
-   },
-   {
-    "title":"Drop Out",
-    "entrance":"JEE",
-    "image":""
-   },
-   {
-    "title":"Drop Out",
-    "entrance":"NEET",
-    "image":""
-   },
-   {
-    "title":"Test-Series",
-    "entrance":"NEET",
-    "image":""
-   },
-   {
-    "title":"Test-Series",
-    "entrance":"JEE",
-    "image":""
-   }
-
- ]
+  "courses": [
+    {
+      "id": 1,
+      "title": "Class 11",
+      "entrance": "JEE-(MAIN+ADVANCE)",
+      "image": "https://images.unsplash.com/photo-1511629091441-ee46146481b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGh5c2ljcyUyMGNsYXNzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "name": "ZENITH PROGRAM (TWO YEAR JEE-ADVANCED + OLYMPIADS)",
+      "details": " This course is designed to support the student for board syllabus as well as competitive examinations.Learn from highly qualified faculty (mostly IIT-ians) that excel at competitive exam preparation.Regular Topic Wise Tests (TWTs) are conducted (Online/ Offline) to ensure that the students have fundamentally understood the topic well and the conceptual knowledge of the topic is developed.Major test with cumulative portion is taken periodically to give students a real-time understanding of the difficulty level, time management, the diverse set of questions and patterns and also ranking at an All India level on JEE Main/CET.Online tests are given so that students get real-time exposure from the very beginning.All India Test Series (AITS) is a series of full-length tests conducted after course completion to give the student immense practice for the JEE Main and also to know their national-level performance and All India Rank across all PACE centers.Regular feedback is taken from the students to identify actions to be taken to improve & enhance their performance.A detailed analysis report is given post every test.Our faculty is a team of highly experienced and reputed IIT-ians and top academicians from their respective fields who excel at competitive exam preparation.Duration of lectures 18 hours per week.Separate Olympiad batches are formed after course commencement and specific lectures for Physics / Chemistry / Biology / Astronomy and KVPY are conducted.",
+      "rating": "4.5",
+      "price": "10000",
+      "time": "500",
+      "lectures": [
+        "https://www.youtube.com/watch?v=2PUdWk7uFqA",
+        "https://www.youtube.com/watch?v=Ewx1bo3Vyzg&list=PLbu_fGT0MPsuUzCT6BZvto0hkcA3dEigi&index=1",
+        "https://www.youtube.com/watch?v=15ygVBZitso&list=PLbu_fGT0MPsuT9pmkl2RuowDlIQ0OXI0l"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Class 12",
+      "entrance": "JEE-(MAIN+ADVANCE)",
+      "image": "https://media.istockphoto.com/id/1358852906/photo/math-teacher-teaching-baskara-formula.jpg?b=1&s=170667a&w=0&k=20&c=BfJGahKy8FULQSBWmSpJkjG-gYMhcGtwHsUyqCuKnsA=",
+      "name": "ZENITH PROGRAM (TWO YEAR JEE-ADVANCED + OLYMPIADS)",
+      "details": "This course is designed to cover the depth and breadth of board syllabus as well as competitive examinations and build a strong fundamental base in Physics, Chemistry & Mathematics for sharpening their analytical skills and developing their problem-solving ability for competitive examinations.Regular Topic Wise Tests (TWTs) are conducted (Online/ Offline) to ensure that the students have fundamentally understood the topic well and the conceptual knowledge of the topic is developed.Major test with cumulative portion is taken periodically to give students a conceptual understanding of the difficulty level, time management, the diverse set of questions and patterns and also ranking at an All India level on JEE Main & Advanced.Online tests are given so that students get real-time exposure from the very beginning.All India Test Series (AITS) is a series of full-length tests conducted after course completion to give the student immense practice for the JEE Main/ Advanced and also to know their national-level performance and All India Rank across all PACE centers.Regular feedback is taken from the students to identify actions to be taken to improve & enhance their performance.A detailed analysis report is given post every test.Our faculty is a team of highly experienced and reputed IIT-ians and top academicians from their respective fields who excel at competitive exam preparation. Duration of lectures 18 hours per week.Separate Olympiad batches are formed after course commencement and specific lectures for Physics / Chemistry / Biology / Astronomy and KVPY are conducted.",
+      "rating": "4.3",
+      "price": "20000",
+      "time": "800"
+    },
+    {
+      "id": 3,
+      "title": "Class 11",
+      "entrance": "NEET",
+      "image": "https://media.istockphoto.com/id/1487077397/photo/diary-stethoscope-and-specs-placed-over-textured-orange-background-having-neet-concept-in-mind.jpg?b=1&s=170667a&w=0&k=20&c=Aq_GI-yhpMi_bHgI7WhUaIOZl0_UyomZ5kn8ZoPIdxQ=",
+      "name": "ZENITH PROGRAM (NEET + AIIMS + JIPMER + OLYMPIADS)",
+      "details": "This course is designed to make the students fundamentally strong in Physics, Chemistry & Biology sharpening their analytical skills and developing their problem-solving ability for competitive examinations.This course also covers the depth and breadth of board syllabus.Regular Topic Wise Tests (TWTs) are conducted (Online/ Offline) to ensure that the students have fundamentally understood the topic well and the conceptual knowledge of the topic is developed.Major test with cumulative portion is taken periodically to give students a real-time understanding of the difficulty level, time management, the diverse set of questions and patterns and also ranking at an All India level on NEET/AIIMS/JIPMER.Online tests are given so that students get real-time exposure to the new pattern of NEET testing from the beginning.All India Test Series (AITS) is a series of full-length tests conducted after course completion to give the student immense practice for the NEET/AIIMS/JIPMER and also to know their national-level performance and All India Rank across all PACE centers.Regular feedback is taken from the students to identify actions to be taken to improve & enhance their performance.A detailed analysis report is given post every test.Our faculty is a team of highly experienced and reputed IIT-ians and top academicians from their respective fields who excel at competitive exam preparation.A detailed analysis report is given post every test.",
+      "rating": "4.0",
+      "price": "25000",
+      "time": "600"
+    },
+    {
+      "id": 4,
+      "title": "Class 12",
+      "entrance": "NEET",
+      "image": "https://media.istockphoto.com/id/941761200/photo/young-male-hispanic-teacher-in-biology-class-holding-digital-tablet-and-teaching-human-body.jpg?b=1&s=170667a&w=0&k=20&c=CJbEBJo1pHYtu36tnPDMUKzMj6qvvzJSdCVrXxfw1lM=",
+      "name": "TWO YEAR SUPPORT PROGRAM (NEET + AIIMS + JIPMER",
+      "details": "This course is designed to cover the depth and breadth of competitive examinations preparation.Practice test papers that help in the preparation of competitive exams are also provided.All India Test Series (AITS) is a series of full-length tests conducted after course completion to give the student immense practice for the NEET/AIIMS/JIPMER and also to know their national-level performance and All India Rank across all PACE centers.Regular feedback is taken from the students to identify actions to be taken to improve & enhance their performance.A detailed analysis report is given post every test.Our faculty is a team of highly experienced doctorates and top academicians from their respective fields who excel at competitive exam preparation.Duration of lectures 9 hours per week.",
+      "rating": "4.8",
+      "price": "35000",
+      "time": "1000"
+    },
+    {
+      "id": 5,
+      "title": "Class 11",
+      "entrance": "CET",
+      "image": "https://media.istockphoto.com/id/898958962/photo/determined-students-engineers.jpg?s=612x612&w=0&k=20&c=LsQtSNq9dhbNC6zIsEGIUAut1MVJfuqThPMi_i4N5iQ=",
+      "name": "CET CRASH COURSE",
+      "details": "This program helps students to cover important topics systematically and simultaneously trains them to tackle the entrance examination level problems in such a way that it helps them to improve their expected State rank 1) This course is designed to cover the entire syllabus of JEE Main and Advanced in a short period.2) Batch Schedule: 4 days a week Batch Commencing:-After boards till April end",
+      "rating": "4.0",
+      "price": "5000",
+      "time": "300"
+    },
+    {
+      "id": 6,
+      "title": "Class 12",
+      "entrance": "CET",
+      "image": "https://media.istockphoto.com/id/157194193/photo/teacher-writing-on-the-board-for-math.jpg?s=612x612&w=0&k=20&c=1rk3lEM0WgRyM1EtxKS6r_Nk7PfxFvhnSD3qysk0Awg=",
+      "name": "DISTANCE LEARNING (NEET)",
+      "details": "Students who could not join our regular classroom program can enroll in our distance learning program. It doesn’t matter where you live PACE facilitate students to take classes from any sphere of the Country. This program offers students the flexibility to use time according to their requirement 1) This course is for all students who due to some reason could not join the regular classes.2) Our study material along with our Topic wise test & All India Test Series will be delivered to the students.3) Access of PACE online portal will be provided by us.",
+      "rating": "3.8",
+      "price": "8000",
+      "time": "400"
+    },
+    {
+      "id": 7,
+      "title": "Drop Out",
+      "entrance": "JEE-(MAIN+ADVANCE)",
+      "image": "https://media.istockphoto.com/id/1159806988/photo/a-left-handed-person-solving-math-problem.jpg?b=1&s=170667a&w=0&k=20&c=ZEceF-Rc83HLBVzJVMRr9JKXIaALcZJrGwJW8R9AV_Y=",
+      "name": "CRASH COURSE",
+      "details": "This Program helps students to cover important topics systematically and simultaneously trains them to tackle the entrance examination level problems in such a way that it helps them to improve their expected All India Rank.The entire syllabus is covered in the short period by the best professors and it is discussed from the entrance exam point of view. To give the students the feel of the actual exams, they are also provided with All India Test Series through which they get to know their All India Rank across the PACE centers.1) This Course is designed to cover the entire syllabus of JEE Main and Advanced in a short period.2) Batch Schedule: 5 days a week.Batch Commencing:-November to January",
+      "rating": "3.5",
+      "price": "15000",
+      "time": "500"
+    },
+    {
+      "id": 8,
+      "title": "Drop Out",
+      "entrance": "NEET",
+      "image": "https://media.istockphoto.com/id/1342191955/photo/young-boy-preparing-for-exam-studying-at-home.jpg?s=612x612&w=0&k=20&c=9ZNVRw5jgmGsTq1LHmyql7h-yYgYV4FN3pfFJCdSTdM=",
+      "name": "REPEATERS (NEET+AIIMS+JIPMER)",
+      "details": "In this course, we impart knowledge that helps students address weak areas of his/her previous year’s preparation. The program covers the entire syllabus of NEET/AIIMS/JIPMER.For class, XII passed students In this course we impart the right knowledge to students, highlighting the weak areas of his/her previous preparation This program covers the entire syllabus of NEET, AIIMS & JIPMER.Batch commencing:Batch 1- 16 July 2019 Held at Andheri, Thane, Nerul, Dadar",
+      "rating": "4.0",
+      "price": "18000",
+      "time": "600"
+    },
+    {
+      "id": 9,
+      "title": "Test-Series",
+      "entrance": "NEET",
+      "image": "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c3R1ZGVudHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "name": " ALL INDIA TEST SERIES (ONLINE/OFFLINE)",
+      "deatils": "This Course is meant for those students who have studied the topics themselves and want to check their preparation level and compete with Top Rankers on All India basis for Competitive Exams. The students prepared for the test as scheduled provided them at the time of admission. Students are provided with a detailed analysis of the test.10 online NEET test (Oct-Jan) 10 online NEET test after board exam till NEET exam (in between March-May)5 AIIMS online test after NEET exam (As per new NEET pattern)",
+      "rating": "4.5",
+      "price": "3000",
+      "time": "100"
+    },
+    {
+      "id": 10,
+      "title": "Test-Series",
+      "entrance": "JEE-(MAIN+ADVANCE)",
+      "image": "https://plus.unsplash.com/premium_photo-1671070291106-b8a6238b6b56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3R1ZGVudHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "name": "ALL INDIA TEST SERIES (ONLINE)",
+      "details": "This Course is meant for those students who have studied the topics themselves and want to check their preparation level and compete with Top Rankers on All India basis for Competitive Exams. The students prepared for the test as scheduled provided them at the time of admission. Students are provided with a detailed analysis of the test. All India Test Series Course for JEE (Main & Advanced) for XII Students.The main objective is to provide constant practice which covers all the topics and the unit as per the syllabus. JEE Main:- 10 online tests (Oct – Nov.) 5 online tests (Mar-April)JEE Advanced:- 10 online mock tests (March-May) 10 online AITS (March-May)(As per new JEE Main Pattern)",
+      "rating": "4.5",
+      "price": "5000",
+      "time": "150"
+    }
+  ],
+  "carts": [
+    {
+      "id": 2,
+      "title": "Class 12",
+      "entrance": "JEE-(MAIN+ADVANCE)",
+      "image": "https://media.istockphoto.com/id/1358852906/photo/math-teacher-teaching-baskara-formula.jpg?b=1&s=170667a&w=0&k=20&c=BfJGahKy8FULQSBWmSpJkjG-gYMhcGtwHsUyqCuKnsA=",
+      "name": "ZENITH PROGRAM (TWO YEAR JEE-ADVANCED + OLYMPIADS)",
+      "details": "This course is designed to cover the depth and breadth of board syllabus as well as competitive examinations and build a strong fundamental base in Physics, Chemistry & Mathematics for sharpening their analytical skills and developing their problem-solving ability for competitive examinations.Regular Topic Wise Tests (TWTs) are conducted (Online/ Offline) to ensure that the students have fundamentally understood the topic well and the conceptual knowledge of the topic is developed.Major test with cumulative portion is taken periodically to give students a conceptual understanding of the difficulty level, time management, the diverse set of questions and patterns and also ranking at an All India level on JEE Main & Advanced.Online tests are given so that students get real-time exposure from the very beginning.All India Test Series (AITS) is a series of full-length tests conducted after course completion to give the student immense practice for the JEE Main/ Advanced and also to know their national-level performance and All India Rank across all PACE centers.Regular feedback is taken from the students to identify actions to be taken to improve & enhance their performance.A detailed analysis report is given post every test.Our faculty is a team of highly experienced and reputed IIT-ians and top academicians from their respective fields who excel at competitive exam preparation. Duration of lectures 18 hours per week.Separate Olympiad batches are formed after course commencement and specific lectures for Physics / Chemistry / Biology / Astronomy and KVPY are conducted.",
+      "rating": "4.3",
+      "price": "20000",
+      "time": "800"
+    }
+  ]
 }
