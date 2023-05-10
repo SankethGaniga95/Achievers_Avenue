@@ -14,7 +14,7 @@ const [data,setData]=useState({})
 
 const fetchAndUpdata=async(id)=>{
     try{
-    let data =await getData(`http://localhost:8080/courses/${id}`)
+    let data =await getData(`https://jsonserverrct101.onrender.com/courses/${id}`)
     setData(data)
     }
     catch(err){
@@ -28,7 +28,7 @@ useEffect(()=>{
 
 const postlectures=(data)=>{
   return axios ({
-      baseURL:`http://localhost:8080`,
+      baseURL:`https://jsonserverrct101.onrender.com`,
       url:"/carts",
       method:"post",
       data:data,

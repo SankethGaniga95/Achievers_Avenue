@@ -5,7 +5,7 @@ import { SimpleGrid } from "@chakra-ui/react"
 import { useNavigate } from "react-router-dom"
 
 const getData=()=>{
-    return fetch(`http://localhost:8080/courses`).then((res)=>res.json())
+    return fetch(`https://jsonserverrct101.onrender.com/courses`).then((res)=>res.json())
 }
 
 

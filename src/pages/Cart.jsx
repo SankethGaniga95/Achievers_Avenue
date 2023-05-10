@@ -39,7 +39,7 @@ function Cart(){
 
     const fetchAndUpdata=async()=>{
         try{
-        let data =await getData(`http://localhost:8080/carts`)
+        let data =await getData(`https://jsonserverrct101.onrender.com/carts`)
         setData(data)
         }
         catch(err){
