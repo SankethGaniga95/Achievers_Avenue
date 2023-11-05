@@ -9,7 +9,7 @@ import { Container } from '@chakra-ui/react';
 // import Login from './pages/Login';
 function App() {
   return (
-   <>
+   <div className='App'>
    <Container maxWidth="1200px">
    <Navbar/>
    </Container>
@@ -18,7 +18,7 @@ function App() {
    {/* <SignupCard/> */}
    {/* <Login/> */}
   
-   </>
+   </div>
   );
 }
 
