@@ -39,7 +39,7 @@ function Navbar(){
   const navigate=useNavigate()
  return(
  <Flex alignItems="center" >
-    <Box marginTop="25px" marginLeft="20px" >
+    <Box  marginLeft="20px">
     <Image
     width="170px"
     height="90px"
@@ -50,7 +50,7 @@ function Navbar(){
   
     </Box>
     
-     <Box marginTop="50px" marginLeft="140px"  width="630px"display="flex" justifyContent="space-evenly" >
+     <Box marginTop="0px" marginLeft="140px"   width="630px"display="flex" justifyContent="space-evenly" >
         {/* <Router>
       <Link as={RouterLink} to="/" marginLeft='200' _hover='none'  fontWeight='semibold' _activeLink={{fontWeight:"bold"}}>About Us</Link>
       
@@ -72,7 +72,7 @@ function Navbar(){
         }}>{link.label}</NavLink>
       ))}
      </Box>
-     <Button  marginTop="50px" width='125px' bgColor="#376ed5" color="white" height="45px" marginLeft="50px" borderRadius="10px" onClick={()=>navigate("/signup")} _hover={{bg: 'blue.500', }}>Sign in</Button>
+     <Button  marginTop="0px" width='125px' bgColor="#376ed5" color="white" height="45px" marginLeft="50px" borderRadius="10px" onClick={()=>navigate("/signup")} _hover={{bg: 'blue.500', }}>Sign in</Button>
  </Flex> 
  
  )

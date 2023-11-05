@@ -1,5 +1,5 @@
 import CourseCard from "../components/CourseCard"
-import { Container, Heading,Text,Box,Button, Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
+import { Container, Heading,Text,Box,Button, Card, CardHeader, CardBody, CardFooter, Spinner, Spacer, Flex, Center } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import { SimpleGrid } from "@chakra-ui/react"
 import { useNavigate } from "react-router-dom"
@@ -47,7 +47,13 @@ function Courses(){
          </Box>
          <Heading>Online Course</Heading>
          <SimpleGrid columns={[1, 2, 3]} spacing='40px'>
-        {data.map((item,idx)=><CourseCard key={idx+1} {...item}/>)}
+        {data.length>0?data.map((item,idx)=><CourseCard key={idx+1} {...item}/>):<Box h="300px" w="90vw"  display='flex' justifyContent='center' alignItems='center'><Spinner
+  thickness='4px'
+  speed='0.65s'
+  emptyColor='gray.200'
+  color='blue.500'
+  size='xl'
+/></Box>}
          </SimpleGrid>
         </Container>   
         </>
