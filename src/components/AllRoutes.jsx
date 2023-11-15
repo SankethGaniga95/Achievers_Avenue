@@ -9,21 +9,25 @@ import SignupCard from "../pages/Signup"
 import Login from "../pages/Login"
 import SingleCoursePage from "../pages/SingleCoursePage"
 import Cart from "../pages/Cart"
+import { PrivateRoute } from "./PrivateRoute"
+import Payment  from "../pages/CheckoutPage"
 
 
 function AllRoutes(){
 return (
     <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/results" element={<Results/>} />
-        <Route path="/courses" element={<Courses/>} />
-        <Route path="/blogs" element={<Blogs/>} />
+        <Route path="/results" element={<PrivateRoute><Results/></PrivateRoute>} />
+        <Route path="/courses" element={<PrivateRoute><Courses/></PrivateRoute>} />
+        <Route path="/blogs" element={<PrivateRoute><Blogs/></PrivateRoute>} />
         <Route path="/contact" element={<Contact/>} />
-        <Route path="/courses/:id" element={<SingleCoursePage/>}/>
-        <Route path="/lectures/" element={<Lectures/>} />
+        <Route path="/courses/:id" element={<PrivateRoute><SingleCoursePage/></PrivateRoute>}/>
+        <Route path="/lectures/" element={<PrivateRoute><Lectures/></PrivateRoute>} />
         <Route path="/signup" element={<SignupCard/>} />
         <Route path="/login" element={<Login/>} />
-        <Route path="/cart" element={<Cart/>} />
+        <Route path="/cart" element={<PrivateRoute><Cart/></PrivateRoute>} />
+        <Route path="/payment" element={<Payment/>} />
+
 
     </Routes>
 )

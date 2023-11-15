@@ -8,7 +8,7 @@ function Footer(){
    <Box  height="570px" bgColor="#5f8bdd">
       <Flex>
       <VStack>
-         <Box  marginTop="70px" marginLeft="120px">
+         <Box  marginTop="70px" marginLeft="120px" textAlign={"left"}>
          <Container maxW="350px" color="white">
          <Text fontSize="33px" >Achiever's Avenue</Text>
           <Text lineHeight="35px" fontSize="19px" marginTop="20px"  >Educational Services Limited Registered office Address: No. 111, 8th Cross,Paramount Gardens, Thalaghattapura Kanakapura Main Road,Bengaluru-560062 Mobile phone:+91-9380462121 Email:Designersunil23@gmail.com</Text>
@@ -29,7 +29,7 @@ function Footer(){
         
       </VStack>
     <VStack>
-    <Box  marginTop='130px' color="white" marginLeft="110px" lineHeight="40px">
+    <Box  marginTop='130px' color="white" marginLeft="110px" lineHeight="40px" textAlign={"left"}>
     <Text fontSize="23px"  >ABOUT US</Text>
     <Text fontSize="18px">About</Text>
     <Text fontSize="18px">Why</Text>
@@ -43,7 +43,7 @@ function Footer(){
     </Box>
     </VStack>
     <VStack>
-    <Box  marginTop='130px' color="white" marginLeft="120px" lineHeight="40px">
+    <Box  marginTop='130px' color="white" marginLeft="120px" lineHeight="40px" textAlign={"left"}>
     <Text fontSize="23px">NEET</Text>
     <Text fontSize="18px">NEET Exam 2023</Text>
     <Text fontSize="18px">NEET 2023 Exam Dates</Text>

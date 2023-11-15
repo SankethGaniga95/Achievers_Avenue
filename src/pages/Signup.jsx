@@ -14,15 +14,63 @@ import {
     useColorModeValue,
     Image,
   } from '@chakra-ui/react';
-  import { useState } from 'react';
+  import { useReducer, useState } from 'react';
   import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
   import logo from "../Images/Achievers_Avenue__1_-removebg-preview.png"
-  import {Link} from "react-router-dom"
+  import {Link, useNavigate} from "react-router-dom"
+import axios from 'axios';
+import { useToast } from '@chakra-ui/react'
 
    
+  const initialState={
+    firstName:"",
+    lastName:"",
+    email:"",
+    password:""
+
+  }
+
+  const reducer=(state,action)=>{
+    let {type,payload}=action
+    switch(type){
+      case "firstName":
+        return {...state,firstName:payload}
+        case "lastName":
+        return {...state,lastName:payload}
+        case "email":
+        return {...state,email:payload}
+        case "password":
+          return {...state,password:payload}
+        case "reset":
+          return initialState
+        default :
+        return state
+    }
+
+  }
   export default function SignupCard() {
     const [showPassword, setShowPassword] = useState(false);
-   
+    const [state, dispatch]=useReducer(reducer,initialState)
+    const toast=useToast()
+    const navigate=useNavigate()
+
+    const handleSignin=()=>{
+      axios.post("https://jsonserverrct101.onrender.com/users",state)
+      .then(res=>{
+        toast({
+          title: 'Account created.',
+          description: "We've created your account for you.",
+          status: 'success',
+          duration: 9000,
+          isClosable: true,
+        }) 
+        navigate("/login")})
+      .catch(err=>{
+        console.log(err)
+      })
+      dispatch({type:"reset"})
+    }
+  
   
     return (
       <Flex
@@ -55,24 +103,24 @@ import {
                 <Box>
                   <FormControl id="firstName" isRequired>
                     <FormLabel>First Name</FormLabel>
-                    <Input type="text" />
+                    <Input type="text" value={state.firstName} name="firstName" onChange={(e)=>dispatch({type:"firstName",payload:e.target.value})} />
                   </FormControl>
                 </Box>
                 <Box>
                   <FormControl id="lastName">
                     <FormLabel>Last Name</FormLabel>
-                    <Input type="text" />
+                    <Input type="text" value={state.lastName} name="lastName" onChange={(e)=>dispatch({type:"lastName",payload:e.target.value})} />
                   </FormControl>
                 </Box>
               </HStack>
               <FormControl id="email" isRequired>
                 <FormLabel>Email address</FormLabel>
-                <Input type="email" />
+                <Input type="email" value={state.email} name="email" onChange={(e)=>dispatch({type:"email",payload:e.target.value})} />
               </FormControl>
               <FormControl id="password" isRequired>
                 <FormLabel>Password</FormLabel>
                 <InputGroup>
-                  <Input type={showPassword ? 'text' : 'password'} />
+                  <Input type={showPassword ? 'text' : 'password'} value={state.password} name="password" onChange={(e)=>dispatch({type:"password",payload:e.target.value})} />
                   <InputRightElement h={'full'}>
                     <Button
                       variant={'ghost'}
@@ -92,7 +140,8 @@ import {
                   color={'white'}
                   _hover={{
                     bg: 'blue.500',
-                  }}>
+                  }}
+                  onClick={handleSignin}>
                   Sign up
                 </Button>
               </Stack>
