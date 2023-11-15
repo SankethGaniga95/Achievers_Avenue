@@ -45,7 +45,9 @@ export default function CartItem({id,title,entrance,name,rating,price,image,time
     </CardBody>
 
     <CardFooter>
-      <Button variant='ghost' colorScheme='blue' marginTop={'-50px'} onClick={()=>handleDelete(id)}>
+      <Button variant='ghost' colorScheme='blue' marginTop={'-50px'} onClick={()=>{
+        console.log(id)
+        handleDelete(id)}}>
         Remove
       </Button>
     </CardFooter>

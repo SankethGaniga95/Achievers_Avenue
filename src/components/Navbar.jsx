@@ -3,6 +3,8 @@ import logo from "../Images/Achievers_Avenue__1_-removebg-preview.png"
 // import { BrowserRouter as Router,NavLink as RouterLink } from "react-router-dom"
 import { NavLink, useNavigate } from "react-router-dom"
 import styles from "./Navbar.module.css"
+import { useContext } from "react"
+import { AuthContext } from "../Context/AuthContextProvider"
 
 const links=[
   {
@@ -37,6 +39,13 @@ const links=[
 
 function Navbar(){
   const navigate=useNavigate()
+  const {isAuthState,logoutUser}=useContext(AuthContext)
+  console.log(isAuthState)
+
+  const handleLogOut=()=>{
+   logoutUser()
+   navigate("/")
+  }
  return(
  <Flex alignItems="center" >
     <Box  marginLeft="20px">
@@ -72,7 +81,8 @@ function Navbar(){
         }}>{link.label}</NavLink>
       ))}
      </Box>
-     <Button  marginTop="0px" width='125px' bgColor="#376ed5" color="white" height="45px" marginLeft="50px" borderRadius="10px" onClick={()=>navigate("/signup")} _hover={{bg: 'blue.500', }}>Sign in</Button>
+     {isAuthState.isAuth?<Button  marginTop="0px" width='125px' bgColor="#376ed5" color="white" height="45px" marginLeft="50px" borderRadius="10px" onClick={handleLogOut} _hover={{bg: 'blue.500', }}>Logout</Button>:
+     <Button  marginTop="0px" width='125px' bgColor="#376ed5" color="white" height="45px" marginLeft="50px" borderRadius="10px" onClick={()=>navigate("/signup")} _hover={{bg: 'blue.500', }}>Sign in</Button>}
  </Flex> 
  
  )

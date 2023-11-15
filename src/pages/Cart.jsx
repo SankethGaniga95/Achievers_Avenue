@@ -1,5 +1,5 @@
 import { Container, Heading,Text,Flex,ButtonGroup,Button,Card,CardBody,Stack } from "@chakra-ui/react"
-import {useState,useEffect} from "react"
+import {useState,useEffect, useContext} from "react"
 import CartItem from "../components/CartItem"
 import axios from "axios"
 // import AlertDialogExample from "../components/Alert"
@@ -14,6 +14,8 @@ import {
   } from '@chakra-ui/react'
   import React from "react"
   import { useDisclosure } from "@chakra-ui/react"
+import { AuthContext } from "../Context/AuthContextProvider"
+import { useNavigate } from "react-router-dom"
  
 
 
@@ -29,6 +31,8 @@ function Cart(){
     const cancelRef = React.useRef()
   
     const [data,setData]=useState({})
+    const {getTotal}=useContext(AuthContext)
+    const navigate=useNavigate()
 
 
 
@@ -61,7 +65,7 @@ function Cart(){
     const deleteCartItems=(id)=>{
         return axios({
                method:"delete",
-               url:`http://localhost:8080/carts/${id}`
+               url:`https://jsonserverrct101.onrender.com/carts/${id}`
            })
            
            }
@@ -72,6 +76,14 @@ function Cart(){
     
    
     }
+
+    const handlePayment=()=>{
+      
+      getTotal(total)
+      navigate("/payment")
+    }
+
+    console.log(getTotal)
 
    
    
@@ -131,7 +143,7 @@ function Cart(){
                 <Button ref={cancelRef} onClick={onClose}>
                   Cancel
                 </Button>
-                <Button colorScheme='blue' onClick={onClose} ml={3}>
+                <Button colorScheme='blue' onClick={handlePayment} ml={3}>
                   Pay
                 </Button>
               </AlertDialogFooter>

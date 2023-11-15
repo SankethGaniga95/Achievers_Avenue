@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 // import Home from './pages/Home';
 import Navbar from './components/Navbar'
 import { Container } from '@chakra-ui/react';
+
 // import SignupCard from './pages/Signup';
 // import Login from './pages/Login';
 function App() {
@@ -15,8 +16,7 @@ function App() {
    </Container>
    <AllRoutes/>
    <Footer/>
-   {/* <SignupCard/> */}
-   {/* <Login/> */}
+ 
   
    </div>
   );
