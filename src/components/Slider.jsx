@@ -22,55 +22,55 @@ export const MultipleItems=()=> {
       slidesToScroll: 1
     };
     return (
-      <div>
+      <div style={{border:"2px solid black"}}>
         <Slider {...settings}>
-        <Card maxW="210px" maxH="400px" >
+        <Card maxW={["100px","150px","210px"]} maxH={["300px","350px","400px"]} >
     <Image
       src={student1}
       alt='Green double couch with wooden legs'
       borderTopLeftRadius='lg'
       borderTopRightRadius="lg"
-      width="250px"
-      height="220px" 
+      width={["80px","150px","250px"]}
+      height={["110px","170px","220px"]}  
       objectFit='fill'
     />
     <Stack mt='3'>
-      <Heading fontSize="18px" fontWeight="500">Akash Tiwari</Heading>
-      <Text fontSize="14px" fontWeight="500" color='blue.600' lineHeight="2px">
+      <Heading fontSize={["12px","15px","18px"]} fontWeight="500">Akash Tiwari</Heading>
+      <Text fontSize={["12px","14px","14px"]} fontWeight="500" color='blue.600' lineHeight={["17px","7px","2px"]}>
         Bengaluru, Karnataka
       </Text>
-      <Flex gap={10}  >
-      <Text ml="50px" mt="3">Air</Text>
-      <Text mt="3">Score</Text>
+      <Flex gap={[2,5,10]}  >
+      <Text ml={["5px","40px","50px"]} mt={["-1","1","3.5"]}fontSize={['14px',"18px","18px"]}>Air</Text>
+      <Text mt={["-1","1","3.5"]} fontSize={['14px',"18px","18px"]}>Score</Text>
       </Flex>
-      <Flex gap={5}> 
-      <Text color='blue.600' fontSize='2xl' ml="45px" mt="-3">
+      <Flex gap={[-1,3,5]}> 
+      <Text color='blue.600' fontSize={['14px',"18px","22px"]} ml={["10px","67px","50px"]} mt={['-1','-2','-3']}>
         02
       </Text>
-      <Text fontSize="2xl" mt="-3">|</Text>
-      <Text color='blue.600' fontSize='2xl' mt="-3">
+      <Text fontSize={['14px',"18px","22px"]} mt={['-1','-2','-3']}>|</Text>
+      <Text color='blue.600' fontSize={['14px',"18px","22px"]} mt={['-1','-2','-3']}>
         719
       </Text>
       </Flex>
     </Stack>
   <CardFooter>
-      <Button variant='solid' colorScheme='blue' width="150px" ml="10px" mt="-10px">
+      <Button variant='solid' colorScheme='blue' width="150px" ml={["-2px","20px","10px"]} mt="-10px" fontSize={['7px',"18px","18px"]}>
         know more
       </Button>
   </CardFooter>
 </Card>
-<Card maxW="210px" maxH="400px" >
+<Card maxW={["100px","150px","210px"]} maxH={["300px","350px","400px"]} >
     <Image
       src={student2}
       alt='Green double couch with wooden legs'
       borderTopLeftRadius='lg'
       borderTopRightRadius="lg"
-      width="250px"
-      height="220px" 
+      width={["80px","150px","250px"]}
+      height={["110px","170px","220px"]} 
       objectFit='fill'
     />
     <Stack mt='3'>
-      <Heading fontSize="18px" fontWeight="500">Sudeep</Heading>
+      <Heading fontSize={["12px","15px","18px"]}  fontWeight="500">Sudeep</Heading>
       <Text fontSize="14px" fontWeight="500" color='blue.600' lineHeight="2px">
         Bengaluru, Karnataka
       </Text>
@@ -105,7 +105,7 @@ export const MultipleItems=()=> {
       objectFit='fill'
     />
     <Stack mt='3'>
-      <Heading fontSize="18px" fontWeight="500">Johns</Heading>
+      <Heading fontSize={["12px","15px","18px"]}  fontWeight="500">Johns</Heading>
       <Text fontSize="14px" fontWeight="500" color='blue.600' lineHeight="2px">
         Kolkata, West Bengal
       </Text>
@@ -140,7 +140,7 @@ export const MultipleItems=()=> {
       objectFit='fill'
     />
     <Stack mt='3'>
-      <Heading fontSize="18px" fontWeight="500">Pradeep</Heading>
+      <Heading fontSize={["12px","15px","18px"]}  fontWeight="500">Pradeep</Heading>
       <Text fontSize="14px" fontWeight="500" color='blue.600' lineHeight="2px">
         Raichur, Karnataka
       </Text>
@@ -176,7 +176,7 @@ export const MultipleItems=()=> {
       objectFit='fill'
     />
     <Stack mt='3'>
-      <Heading fontSize="18px" fontWeight="500">Akash Tiwari</Heading>
+      <Heading fontSize={["12px","15px","18px"]}  fontWeight="500">Akash Tiwari</Heading>
       <Text fontSize="14px" fontWeight="500" color='blue.600' lineHeight="2px">
         Bengaluru, Karnataka
       </Text>
@@ -212,7 +212,7 @@ export const MultipleItems=()=> {
       objectFit='fill'
     />
     <Stack mt='3'>
-      <Heading fontSize="18px" fontWeight="500">Akash Tiwari</Heading>
+      <Heading fontSize={["12px","15px","18px"]}  fontWeight="500">Akash Tiwari</Heading>
       <Text fontSize="14px" fontWeight="500" color='blue.600' lineHeight="2px">
         Bengaluru, Karnataka
       </Text>
@@ -248,7 +248,7 @@ export const MultipleItems=()=> {
       objectFit='fill'
     />
     <Stack mt='3'>
-      <Heading fontSize="18px" fontWeight="500">Akash Tiwari</Heading>
+      <Heading fontSize={["12px","15px","18px"]}  fontWeight="500">Akash Tiwari</Heading>
       <Text fontSize="14px" fontWeight="500" color='blue.600' lineHeight="2px">
         Bengaluru, Karnataka
       </Text>
@@ -284,7 +284,7 @@ export const MultipleItems=()=> {
       objectFit='fill'
     />
     <Stack mt='3'>
-      <Heading fontSize="18px" fontWeight="500">Akash Tiwari</Heading>
+      <Heading fontSize={["12px","15px","18px"]}  fontWeight="500">Akash Tiwari</Heading>
       <Text fontSize="14px" fontWeight="500" color='blue.600' lineHeight="2px">
         Bengaluru, Karnataka
       </Text>

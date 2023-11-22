@@ -11,6 +11,7 @@ import SingleCoursePage from "../pages/SingleCoursePage"
 import Cart from "../pages/Cart"
 import { PrivateRoute } from "./PrivateRoute"
 import Payment  from "../pages/CheckoutPage"
+import { ViewLectures } from "../pages/ViewLectures"
 
 
 function AllRoutes(){
@@ -27,6 +28,7 @@ return (
         <Route path="/login" element={<Login/>} />
         <Route path="/cart" element={<PrivateRoute><Cart/></PrivateRoute>} />
         <Route path="/payment" element={<Payment/>} />
+        <Route path="/view" element={<ViewLectures/>} />
 
 
     </Routes>

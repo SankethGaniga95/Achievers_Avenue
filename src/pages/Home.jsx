@@ -47,68 +47,66 @@ function Home(){
     />
     </Card>
 </Flex> */}
+
 <Card
-  direction={{ base: 'column', sm: 'row' }}
-  overflow='hidden'
-  variant='outline'
-  height="600px"
- 
- 
->
-  
-
-  <Stack>
-    <CardBody marginLeft={"100px"} >
-      <Heading size='xl' lineHeight={2} marginTop="80px">Online & offline coaching classes for <span style={{color:"#376ed5"}}> NEET | IIT</span> </Heading>
-
-      <Text py='10' fontSize={"20px"} >
-      Best academics,experienced faculty,advanced study material,regular test & doubt counter.Do you want to add spark to your NEET preparations? <Link color='blue.600'>  Coaching Institute Admission are open</Link>
-      </Text>
-      <ButtonGroup spacing='8' >
-      <Button variant='outline' colorScheme='blue' width="150px"height="60px" fontSize={"xl"}>
-       Know More
-      </Button>
-      <Button variant='solid' colorScheme='blue'  width="150px"height="60px" fontSize={"xl"}>
-      Join Now
-      </Button>
-    </ButtonGroup>
-    </CardBody>
-
-  </Stack>
-  <Image
-    objectFit='conatin'
-    maxW={"1000px"}
-    src={images}
-    alt='Caffe Latte'
-   
-    height="460px"
-    marginRight="30px"
-    marginTop="110px"
-  
-  />
-</Card>
+      direction={{ base: 'column', md: 'row', sm: 'column', lg: 'row' }}
+      overflow='hidden'
+      variant='outline'
+      height={['auto', 'auto', 'auto']}
+    >
+      <Stack spacing={6} p={6} flex={{ base: 1, md: 1, lg: 1 }}>
+        <CardBody>
+          <Heading size='xl' lineHeight={2} marginTop={['20px', '80px']}>
+            Online & offline coaching classes for <span style={{ color: '#376ed5' }}> NEET | IIT</span>
+          </Heading>
+          <Text py={['4', '10']} fontSize={['16px', '20px']}>
+            Best academics, experienced faculty, advanced study material, regular test & doubt counter. Do you want to add
+            spark to your NEET preparations?{' '}
+            <Link color='blue.600'> Coaching Institute Admission are open</Link>
+          </Text>
+          <ButtonGroup spacing='4'>
+            <Button variant='outline' colorScheme='blue' width={['100%', '150px']} height={['50px', '60px']} fontSize={['xl', 'xl']}>
+              Know More
+            </Button>
+            <Button variant='solid' colorScheme='blue' width={['100%', '150px']} height={['50px', '60px']} fontSize={['xl', 'xl']}>
+              Join Now
+            </Button>
+          </ButtonGroup>
+        </CardBody>
+      </Stack>
+      <Image
+        objectFit='cover'
+        maxW={['100%', '100%', '1000px']}
+        src={images}
+        alt='Caffe Latte'
+        height={['300px', '460px']}
+        marginRight={['0', '0', '30px']}
+        marginTop={['20px', '110px']}
+        marginLeft={['10px', '0', '30px']}
+      />
+    </Card>
   {/* </Container>       */}
 {/* -------------------------------------------------------         */}
-<Box  height="770px" bg="#f3f8fa"  border="1px solid #f3f8fa">
-<Box marginLeft={'450px'} width="500px" marginTop="70px">
-<Text color="blue" fontSize="25px" fontWeight="semibold" marginLeft="-80px" marginTop="100px">About</Text>
-<Text fontSize="37px" fontWeight="bold">Our Coaching Institution</Text>
+<Box  height={['1300px','1300px','770px']} bg="#f3f8fa"  border="1px solid #f3f8fa">
+<Box marginLeft={['-20px','90px','450px']} width="500px" marginTop={["70px","60px","70px"]}>
+<Text color="blue" fontSize="25px" fontWeight="semibold" marginLeft={["-90px"]} >About</Text>
+<Text fontSize={["16px","24px","37px"]} fontWeight="bold" marginLeft={["-70px"]}>Our Coaching Institution</Text>
 
   </Box>
 
 
-<Container maxW="1200px"  marginTop="70px" > 
+<Container maxW={["300px","auto","1200px"]}  marginTop="70px" > 
 
-<SimpleGrid spacing={40} templateColumns='repeat(auto-fill, minmax(200px, 1fr))'>
-  <Card maxW={"750px"} padding={4}>
+<SimpleGrid spacing={[20,30,40]} templateColumns='repeat(auto-fill, minmax(200px, 1fr))'>
+  <Card maxW={["400px","600px","750px"]} height={["270px","330px","400px"]} padding={4} >
     <CardHeader>
       <Center>
-      <Image src={cardImage1} />
+      <Image src={cardImage1} height={["70px","100px","150px"]} />
       </Center>
     </CardHeader>
     <CardBody>
       <Center>
-      <Heading fontWeight={"bold"}>50+</Heading>
+      <Heading fontWeight={"bold"} fontSize={["24px","36px","42px"]}>50+</Heading>
       </Center>
       <Center>
         <Text fontSize={"22px"} color="gray.600" marginTop={"20px"}>
@@ -118,15 +116,15 @@ function Home(){
     </CardBody>
     
   </Card>
-  <Card maxW={"750px"} padding={4}>
+  <Card maxW={["400px","600px","750px"]} height={["270px","330px","400px"]} padding={4} >
     <CardHeader>
     <Center>
-    <Image src={cardImage2}/>
+    <Image src={cardImage2} height={["70px","100px","150px"]}/>
     </Center>
     </CardHeader>
     <CardBody>
     <Center>
-      <Heading fontWeight={"bold"}>30000+</Heading>
+      <Heading fontWeight={"bold"} fontSize={["24px","36px","42px"]}>30000+</Heading>
       </Center>
       <Center>
         <Text fontSize={"22px"} color="gray.600" marginTop={"20px"}>
@@ -135,15 +133,15 @@ function Home(){
       </Center>
     </CardBody>
   </Card>
-  <Card maxW={"750px"} padding={4}>
+  <Card maxW={["400px","600px","750px"]} height={["270px","330px","400px"]} padding={4} >
     <CardHeader>
     <Center>
-    <Image src={cardImage3}/>
+    <Image src={cardImage3} height={["70px","100px","150px"]}/>
     </Center>
     </CardHeader>
     <CardBody>
     <Center>
-      <Heading fontWeight={"bold"}>1000+</Heading>
+      <Heading fontWeight={"bold"} fontSize={["24px","36px","42px"]}>1000+</Heading>
       </Center>
       <Center>
         <Text fontSize={"22px"} color="gray.600" marginTop={"20px"}>
@@ -163,27 +161,27 @@ function Home(){
 </Box>
 {/* --------------------------------------------------------------- */}
 <Card
-  direction={{ base: 'column', sm: 'row' }}
+  direction={{ base: 'column', md: 'row', sm: 'column', lg: 'row' }}
   overflow='hidden'
   variant='outline'
-  height="600px"
+  height={['auto', '950px', '600px']}
  
  
 >
   <Image
     objectFit='contain'
-    maxW={"1000px"}
+    maxW={["270px",'500px',"1000px"]}
     src={cardImage4}
     alt='Caffe Latte'
    
     height="400px"
-    marginLeft="70px"
-    marginTop="110px"
+    marginLeft={["50px","50px","70px"]}
+    marginTop={["70px","90","110px"]}
   />
 
   <Stack>
-    <CardBody marginLeft={"40px"} >
-      <Heading size='2xl' lineHeight={1.3} marginTop="80px">You will get classes with qualified lectures</Heading>
+    <CardBody marginLeft={["30px","40px","70px"]} >
+      <Heading size='2xl' lineHeight={1.3} marginTop={["30px","60px","80px"]}>You will get classes with qualified lectures</Heading>
 
       <Text py='10' fontSize={"20px"} >
        We successfully provide students with itensive courses by India's top faculties and personal mentors. 
@@ -196,16 +194,16 @@ function Home(){
   </Stack>
 </Card>
 <Box height="600px" bg="#f3f8fa"  border="1px solid #f3f8fa">
-  <Box width='100%' height='550px' marginTop='100px'>
+  <Box width='100%' height={['auto',"auto",'550px']} marginTop={['70px',"85px",'100px']} >
     <Flex>
-      <Box  width='30%' height='250px' marginLeft='100px' paddingTop={"60px"} textAlign={"left"}>
-        <Text color={"blue.600"} fontSize={"24px"} fontWeight={"600"}>Toppers</Text>
-       <Heading color={"blackAlpha.700"}>NEET UG 2023</Heading>
-       <Text fontWeight={"500"} mt={"10px"}>All India Rank (AIR)</Text> 
-       <Text lineHeight={"40px"} fontWeight={"500"} color={"blackAlpha.700"}>We successfully provide students with intensive courses by India's top faculties and personal mentors. </Text>
-      <Button variant={"outline"} border={"1px solid black"} mt="50px" ml="10px" fontSize={"20px"} padding={"20px"} >Know More</Button>
+      <Box  maxWidth={["20%","20%",'30%']} height={'250px'} marginLeft={["20px","70px",'100px']} paddingTop={["10px","50px","60px"]} textAlign={"left"} >
+        <Text color={"blue.600"} fontSize={["14px",'18px','24px']} fontWeight={"600"}>Toppers</Text>
+       <Heading color={"blackAlpha.700"} fontSize={["14px",'18px','24px']} mt={2}>NEET UG 2023</Heading>
+       <Text fontWeight={"500"} mt={"10px"} fontSize={["14px",'18px','24px']}>All India Rank (AIR)</Text> 
+       <Text lineHeight={["20px","30px","40px"]} fontWeight={"500"} color={"blackAlpha.700"} fontSize={["11px",'18px','24px']}>We successfully provide students with intensive courses by India's top faculties and personal mentors. </Text>
+      <Button variant={"outline"} border={"1px solid black"} mt={["10px","30px","50px"]} ml={["0px","5px","10px"]} fontSize={["10px","15px","20px"]} padding={["8px","10px","20px"]} >Know More</Button>
       </Box>
-      <Box width='70%' height='400px'>
+      <Box width={['80%','80%','70%']} height={["200px","300px",'400px']}ml={["10px","15px"]}>
       <MultipleItems/>
       </Box>
       
