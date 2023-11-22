@@ -5,11 +5,11 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContextProvider";
 
-export const PaymentSummary = () => {
+export const PaymentSummary = ({postInLectures}) => {
   const [price, setPrice] = useState("");
   const [state, setState] = useState(false);
   const {isAuthState}=useContext(AuthContext)
-  console.log()
+ 
 //   const dispatch = useDispatch();
 //   const { cart } = useSelector((store) => store.cartReducer);
 //   let _id;
@@ -140,7 +140,7 @@ export const PaymentSummary = () => {
               backgroundColor: "#4182fa",
             }}
             m="10px 0px"
-            // onClick={addToLearning}
+            
           >
             Go To Learning
           </Button>
@@ -157,6 +157,7 @@ export const PaymentSummary = () => {
           }}
           m="10px 0px"
         //   onClick={() => handlePayment(_id)}
+        onClick={postInLectures}
         >
           Complete Checkout
         </Button>

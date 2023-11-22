@@ -4,12 +4,14 @@ import PaymentMethod from "../components/PaymentMethod";
 import { PaymentSummary } from "../components/PaymentSummary";
 import { PaymentCourse } from "../components/PaymentCourse";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 // import { useDispatch, useSelector } from "react-redux";
 // import { getcart } from "../redux/cart/action";
 
 const Payment = () => {
 //   const dispatch = useDispatch();
 //   const { cart } = useSelector((store) => store.cartReducer);
+    const navigate=useNavigate()
     const [cart,setCart]=useState()
 //   useEffect(() => {
 //     dispatch(getcart);
@@ -17,6 +19,11 @@ const Payment = () => {
 const getCartItems=()=>{
   axios.get(`https://jsonserverrct101.onrender.com/carts`).then(res=>{
   setCart(res.data)})
+}
+const postInLectures=()=>{
+  console.log("click")
+  axios.post(`https://jsonserverrct101.onrender.com/lectures`,cart).then(res=>console.log(res))
+  navigate("/lectures")
 }
 useEffect(()=>{
 getCartItems()
@@ -142,7 +149,7 @@ getCartItems()
           flexShrink={0}
           flexGrow={1}
         >
-          <PaymentSummary />
+          <PaymentSummary postInLectures={postInLectures}/>
         </Box>
       </Flex>
     </Box>
