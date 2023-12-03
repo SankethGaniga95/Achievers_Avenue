@@ -9,6 +9,7 @@ export const ViewLectures = () => {
  const selectCourse=location.state.selectedCourse
  const firstVideo=selectCourse.lectures[0]
  const [currentVideo,setCurrentVideo]=useState(firstVideo)
+
   return (
     <div className='main-video-container'>
     <div className='left-side'>
@@ -20,6 +21,11 @@ export const ViewLectures = () => {
           height='100%'
           
         />
+      </div>
+      <div style={{marginLeft:"30px",fontWeight:"bold"}}>
+        <h1  >Name: {selectCourse.name}</h1>
+        <h4 >Class: {selectCourse.title}</h4>
+        <p>Entrance: {selectCourse.entrance}</p>
       </div>
       <div className='video-description-container'>
         <div className='video-nav'>

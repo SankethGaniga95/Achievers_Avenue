@@ -202,7 +202,7 @@ function Navbar() {
 
       {/* Logout or Sign In Button */}
       {isAuthState.isAuth ? (
-        <Button display={["none","none"]}
+        <Button display={["none","none","flex"]}
           marginTop="0px"
           width="125px"
           bgColor="#376ed5"

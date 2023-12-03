@@ -1,5 +1,5 @@
 import CourseCard from "../components/CourseCard"
-import { Container, Heading,Text,Box,Button, Card, CardHeader, CardBody, CardFooter, Spinner, Spacer, Flex, Center, Input, Select } from "@chakra-ui/react"
+import { Container, Heading,Text,Box,Button, Card, CardHeader, CardBody, CardFooter, Spinner, Spacer, Flex, Center, Input, Select, Checkbox } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import { SimpleGrid } from "@chakra-ui/react"
 import { useNavigate } from "react-router-dom"
@@ -14,6 +14,9 @@ function Courses(){
    const [data,setData]=useState([])
    const navigate=useNavigate()
    const [search,setSearch]=useState("")
+   const [order,setOrder]=useState("")
+   const [rating,setRating]=useState("")
+   const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
 
 
    const fetchAndUpdate=async()=>{
@@ -33,9 +36,59 @@ function Courses(){
         console.log(err)
     })
    }
+   const handleOrder=()=>{
+    
+    fetch(`https://jsonserverrct101.onrender.com/courses?_sort=price&_order=${order}`)
+    .then(res=>res.json())
+    .then(ans=>setData(ans))
+    .catch(err=>{
+        console.log(err)
+    })
+   }
+   const handleRating=()=>{
+    
+    fetch(`https://jsonserverrct101.onrender.com/courses?_sort=rating&_order=${rating}`)
+    .then(res=>res.json())
+    .then(ans=>setData(ans))
+    .catch(err=>{
+        console.log(err)
+    })
+   }
+
+  
+
+   // Function to handle checkbox changes
+   const handleCheckboxChange = (value) => {
+     // If the checkbox is checked, add it to the selectedCheckboxes array
+     // If the checkbox is unchecked, remove it from the array
+     setSelectedCheckboxes((prevCheckboxes) =>
+       prevCheckboxes.includes(value)
+         ? prevCheckboxes.filter((checkbox) => checkbox !== value)
+         : [...prevCheckboxes, value]
+     );
+     
+   };
+  console.log(selectedCheckboxes)
+   const filterData = async () => {
+    try {
+        const filterParams = selectedCheckboxes.map((checkbox) => `entrance=${checkbox}`).join('&');
+      console.log(filterParams)
+      const response = await fetch(`https://jsonserverrct101.onrender.com/courses?${filterParams}`);
+      const data = await response.json();
+     setData(data)
+      // Handle the fetched data as needed
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+  
  useEffect(()=>{
     fetchAndUpdate()
  },[])
+
+ useEffect(()=>{
+    filterData()
+ },[selectedCheckboxes])
  
     return(
         <>
@@ -49,12 +102,36 @@ function Courses(){
             </Flex>
          </Card>
          <Card mt="15px">
-            <Text>Sort</Text>
-            <Select variant={"filled"} placeholder="Sort By Price">
-                <option value="">Sort By Price(Low to High)</option>
-                <option value="">Sort By Price(High to Low)</option>
+            <Text>Sort By Price</Text>
+            <Select variant={"filled"} value={order} onChange={(e)=>{
+                setOrder(e.target.value)
+                handleOrder()}}>
+                <option value="">Sort By Price</option>
+                <option value="desc">Sort By Price(Low to High)</option>
+                <option value="asc">Sort By Price(High to Low)</option>
             </Select>
          </Card>
+         <Card mt="15px">
+            <Text>Sort</Text>
+            <Select variant={"filled"} value={rating} onChange={(e)=>{
+                setRating(e.target.value)
+                handleRating()}}>
+                <option value="">Sort By Rating</option>
+                <option value="desc">Sort By Rating(Low to High)</option>
+                <option value="asc">Sort By Rating(High to Low)</option>
+            </Select>
+         </Card>
+
+         <Card mt="15px">
+            <Text>Filter</Text>
+            <Checkbox isChecked={selectedCheckboxes.includes('NEET')} onChange={() => handleCheckboxChange('NEET')}>
+              NEET
+                </Checkbox>
+            <Checkbox isChecked={selectedCheckboxes.includes('CET')} onChange={() => handleCheckboxChange('CET')}>
+               CET
+            </Checkbox>
+         </Card>
+        
 
         </Box>
 
