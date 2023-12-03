@@ -1,5 +1,5 @@
 import CourseCard from "../components/CourseCard"
-import { Container, Heading,Text,Box,Button, Card, CardHeader, CardBody, CardFooter, Spinner, Spacer, Flex, Center } from "@chakra-ui/react"
+import { Container, Heading,Text,Box,Button, Card, CardHeader, CardBody, CardFooter, Spinner, Spacer, Flex, Center, Input, Select } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import { SimpleGrid } from "@chakra-ui/react"
 import { useNavigate } from "react-router-dom"
@@ -13,6 +13,7 @@ const getData=()=>{
 function Courses(){
    const [data,setData]=useState([])
    const navigate=useNavigate()
+   const [search,setSearch]=useState("")
 
 
    const fetchAndUpdate=async()=>{
@@ -24,6 +25,14 @@ function Courses(){
         console.log(err)
     }
    }
+   const handleSearch=()=>{
+    fetch(`https://jsonserverrct101.onrender.com/courses?q=${search}`)
+    .then(res=>res.json())
+    .then(ans=>setData(ans))
+    .catch(err=>{
+        console.log(err)
+    })
+   }
  useEffect(()=>{
     fetchAndUpdate()
  },[])
@@ -31,6 +40,26 @@ function Courses(){
     return(
         <>
         <Container maxWidth="1200px">
+        <Flex>
+        <Box width="20%">
+         <Card>
+            <Flex>
+            <Input type="text" name="" id="" value={search} onChange={(e)=>setSearch(e.target.value)}/>
+            <Button onClick={handleSearch}>Search</Button>
+            </Flex>
+         </Card>
+         <Card mt="15px">
+            <Text>Sort</Text>
+            <Select variant={"filled"} placeholder="Sort By Price">
+                <option value="">Sort By Price(Low to High)</option>
+                <option value="">Sort By Price(High to Low)</option>
+            </Select>
+         </Card>
+
+        </Box>
+
+        <Box ml="10px" width="80%">
+
          <Box >
         <Card>
         <CardHeader>
@@ -55,6 +84,8 @@ function Courses(){
   size='xl'
 /></Box>}
          </SimpleGrid>
+        </Box>
+        </Flex>
         </Container>   
         </>
     )

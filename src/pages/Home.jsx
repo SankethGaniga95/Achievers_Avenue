@@ -196,7 +196,7 @@ function Home(){
 <Box height="600px" bg="#f3f8fa"  border="1px solid #f3f8fa">
   <Box width='100%' height={['auto',"auto",'550px']} marginTop={['70px',"85px",'100px']} >
     <Flex>
-      <Box  maxWidth={["20%","20%",'30%']} height={'250px'} marginLeft={["20px","70px",'100px']} paddingTop={["10px","50px","60px"]} textAlign={"left"} >
+      <Box  maxWidth={["20%","20%",'30%']} height={'250px'} marginLeft={["20px","70px",'100px']} paddingTop={["0px","50px","60px"]} textAlign={"left"} >
         <Text color={"blue.600"} fontSize={["14px",'18px','24px']} fontWeight={"600"}>Toppers</Text>
        <Heading color={"blackAlpha.700"} fontSize={["14px",'18px','24px']} mt={2}>NEET UG 2023</Heading>
        <Text fontWeight={"500"} mt={"10px"} fontSize={["14px",'18px','24px']}>All India Rank (AIR)</Text> 
@@ -214,12 +214,12 @@ function Home(){
 
 </Box>
 <Box height="500px" bg="#f3f8fa"  border="1px solid #f3f8fa">
-  <Box width='100%' height='550px' marginTop='50px'>
+  <Box width='100%' height={['auto',"auto",'550px']} marginTop={['10px',"30px",'50px']}>
     <Flex>
-      <Box  width='30%' height='250px' marginLeft='100px' paddingTop={"60px"} textAlign={"left"}>
-        <Text color={"blue.600"} fontSize={"24px"} fontWeight={"600"}>Our</Text>
-       <Heading color={"blackAlpha.700"} mt="10px">Expert Faculty</Heading>
-       <Text lineHeight={"40px"} mt="10px" fontWeight={"500"} color={"blackAlpha.700"}>We successfully provide students with intensive courses by India's top faculties and personal mentors. </Text>
+      <Box maxWidth={["20%","20%",'30%']} height='250px' marginLeft={["20px","70px",'100px']} paddingTop={["0px","50px","60px"]} textAlign={"left"}>
+        <Text color={"blue.600"} fontSize={["16px",'18px','24px']} fontWeight={"600"}>Our</Text>
+       <Heading color={"blackAlpha.700"} mt="10px" fontSize={["14px",'18px','24px']}>Expert Faculty</Heading>
+       <Text lineHeight={["20px","30px","40px"]} fontSize={["11px",'18px','24px']} mt="10px" fontWeight={"500"} color={"blackAlpha.700"}>We successfully provide students with intensive courses by India's top faculties and personal mentors. </Text>
       </Box>
       <Box width='70%' height='400px'>
       <MultipleItems2/>
@@ -239,9 +239,9 @@ function Home(){
       <MultipleItems3/>
       </Box>
       <Box  width='45%' height='450px' bg="#f3f8fa" textAlign={"left"}>
-        <Text color={"blue.600"} fontSize={"24px"} fontWeight={"600"} marginRight='200px' marginLeft={"50px"} paddingTop={"60px"}>Feedback</Text>
-       <Heading mt="10px" marginRight='200px' marginLeft={"50px"} >What students says about us</Heading>
-       <Text lineHeight={"40px"} mt="10px" fontWeight={"500"} color={"blackAlpha.700"} marginRight='200px' marginLeft={"50px"} >The data collected from students about their experience in their educational institutes.</Text>
+        <Text color={"blue.600"} fontSize={["12px","24px","36px"]} fontWeight={"600"} marginRight={["50px","100px",'200px']} marginLeft={["10px","40px","50px"]} paddingTop={"60px"} >Feedback</Text>
+       <Heading mt="10px" fontSize={["12px","24px","36px"]} marginRight={['30px','100px','200px']} marginLeft={["10px","40px","50px"]} >What students says about us</Heading>
+       <Text lineHeight={["15px","35px","40px"]} mt="10px" fontWeight={"700"} color={"blackAlpha.700"} fontSize={["8px","15px","16px"]}  marginRight={['80px','100px','200px']}   marginLeft={["10px","40px","50px"]} >The data collected from students about their experience in their educational institutes.</Text>
       </Box>
       
       
