@@ -12,6 +12,7 @@ import Cart from "../pages/Cart"
 import { PrivateRoute } from "./PrivateRoute"
 import Payment  from "../pages/CheckoutPage"
 import { ViewLectures } from "../pages/ViewLectures"
+import { Error } from "../pages/Error"
 
 
 function AllRoutes(){
@@ -29,6 +30,7 @@ return (
         <Route path="/cart" element={<PrivateRoute><Cart/></PrivateRoute>} />
         <Route path="/payment" element={<Payment/>} />
         <Route path="/view" element={<ViewLectures/>} />
+        <Route path="/*" element={<Error/>} />
 
 
     </Routes>

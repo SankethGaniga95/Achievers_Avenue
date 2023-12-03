@@ -11,43 +11,14 @@ import cardImage4 from "../Images/57a805168570359.643da1114c50f3.jpg"
 import {MultipleItems} from "../components/Slider"
 import { MultipleItems2 } from "../components/Slider2"
 import { MultipleItems3 } from "../components/Slider3"
+import { useNavigate } from "react-router-dom"
 
 
 
 function Home(){
+  const navigate=useNavigate()
     return(
       <>
-        {/* <Container maxWidth="1200px"> */}
-        {/* <Flex>
-        <Card   width="600px"  height="600px" >
-  <CardBody>
-   
-    <Stack mt='6' spacing='3'>
-      <Heading size='xl' lineHeight={"80px"}>Online & offline coaching classes for <span style={{color:"#376ed5"}}> NEET | IIT</span> </Heading>
-      <Text color="gray" >
-       Best academics,experienced faculty,advanced study material,regular test & doubt counter.Do you want to add spark to your NEET prparations?<Link color='blue.600'>Coaching Institute Admission are open</Link>
-      </Text>
-      <ButtonGroup spacing='8' >
-      <Button variant='outline' colorScheme='blue' width="140px"height="55px" fontSize={"xl"}>
-       Know More
-      </Button>
-      <Button variant='solid' colorScheme='blue'  width="140px"height="55px" fontSize={"xl"}>
-      Join Now
-      </Button>
-    </ButtonGroup>
-    </Stack>
-  </CardBody>
-</Card>
-<Card  >
- 
-    <Image
-      src={images}
-      alt='Green double couch with wooden legs'
-      borderRadius='lg'
-    />
-    </Card>
-</Flex> */}
-
 <Card
       direction={{ base: 'column', md: 'row', sm: 'column', lg: 'row' }}
       overflow='hidden'
@@ -68,7 +39,7 @@ function Home(){
             <Button variant='outline' colorScheme='blue' width={['100%', '150px']} height={['50px', '60px']} fontSize={['xl', 'xl']}>
               Know More
             </Button>
-            <Button variant='solid' colorScheme='blue' width={['100%', '150px']} height={['50px', '60px']} fontSize={['xl', 'xl']}>
+            <Button variant='solid' colorScheme='blue' width={['100%', '150px']} height={['50px', '60px']} fontSize={['xl', 'xl']} onClick={()=>navigate("/signup")}>
               Join Now
             </Button>
           </ButtonGroup>
@@ -170,7 +141,7 @@ function Home(){
 >
   <Image
     objectFit='contain'
-    maxW={["270px",'500px',"1000px"]}
+    maxW={["270px",'500px',"700px"]}
     src={cardImage4}
     alt='Caffe Latte'
    
@@ -179,11 +150,11 @@ function Home(){
     marginTop={["70px","90","110px"]}
   />
 
-  <Stack>
-    <CardBody marginLeft={["30px","40px","70px"]} >
-      <Heading size='2xl' lineHeight={1.3} marginTop={["30px","60px","80px"]}>You will get classes with qualified lectures</Heading>
+  <Stack textAlign={"left"}>
+    <CardBody marginLeft={["30px","40px","40px"]}  >
+      <Heading size='xl' lineHeight={1.3} marginTop={["30px","60px","60px"]}>You will get classes with qualified lectures</Heading>
 
-      <Text py='10' fontSize={"20px"} >
+      <Text py='8' fontSize={"20px"} >
        We successfully provide students with itensive courses by India's top faculties and personal mentors. 
       </Text>
       <Button variant='outline' colorScheme='black' width={'150px'} height={"60px"} fontSize={"20px"}>
@@ -196,11 +167,11 @@ function Home(){
 <Box height="600px" bg="#f3f8fa"  border="1px solid #f3f8fa">
   <Box width='100%' height={['auto',"auto",'550px']} marginTop={['70px',"85px",'100px']} >
     <Flex>
-      <Box  maxWidth={["20%","20%",'30%']} height={'250px'} marginLeft={["20px","70px",'100px']} paddingTop={["0px","50px","60px"]} textAlign={"left"} >
+      <Box  maxWidth={["20%","20%",'30%']} height={'250px'} marginLeft={["20px","70px",'90px']} paddingTop={["0px","0px","30px"]} textAlign={"left"} >
         <Text color={"blue.600"} fontSize={["14px",'18px','24px']} fontWeight={"600"}>Toppers</Text>
-       <Heading color={"blackAlpha.700"} fontSize={["14px",'18px','24px']} mt={2}>NEET UG 2023</Heading>
-       <Text fontWeight={"500"} mt={"10px"} fontSize={["14px",'18px','24px']}>All India Rank (AIR)</Text> 
-       <Text lineHeight={["20px","30px","40px"]} fontWeight={"500"} color={"blackAlpha.700"} fontSize={["11px",'18px','24px']}>We successfully provide students with intensive courses by India's top faculties and personal mentors. </Text>
+       <Heading color={"blackAlpha.700"} fontSize={["14px",'18px','32px']} mt={2}>NEET UG 2023</Heading>
+       <Text fontWeight={"500"} mt={"10px"} fontSize={["14px",'18px','18px']}>All India Rank (AIR)</Text> 
+       <Text lineHeight={["20px","30px","30px"]} fontWeight={"500"} color={"blackAlpha.700"} fontSize={["11px",'18px','18px']} mt={"10px"}>We successfully provide students with intensive courses by India's top faculties and personal mentors. </Text>
       <Button variant={"outline"} border={"1px solid black"} mt={["10px","30px","50px"]} ml={["0px","5px","10px"]} fontSize={["10px","15px","20px"]} padding={["8px","10px","20px"]} >Know More</Button>
       </Box>
       <Box width={['80%','80%','70%']} height={["200px","300px",'400px']}ml={["10px","15px"]}>
@@ -216,10 +187,10 @@ function Home(){
 <Box height="500px" bg="#f3f8fa"  border="1px solid #f3f8fa">
   <Box width='100%' height={['auto',"auto",'550px']} marginTop={['10px',"30px",'50px']}>
     <Flex>
-      <Box maxWidth={["20%","20%",'30%']} height='250px' marginLeft={["20px","70px",'100px']} paddingTop={["0px","50px","60px"]} textAlign={"left"}>
+      <Box maxWidth={["20%","20%",'30%']} height='250px' marginLeft={["20px","70px",'90px']} paddingTop={["0px","0px","30px"]} textAlign={"left"}>
         <Text color={"blue.600"} fontSize={["16px",'18px','24px']} fontWeight={"600"}>Our</Text>
-       <Heading color={"blackAlpha.700"} mt="10px" fontSize={["14px",'18px','24px']}>Expert Faculty</Heading>
-       <Text lineHeight={["20px","30px","40px"]} fontSize={["11px",'18px','24px']} mt="10px" fontWeight={"500"} color={"blackAlpha.700"}>We successfully provide students with intensive courses by India's top faculties and personal mentors. </Text>
+       <Heading color={"blackAlpha.700"} mt="10px" fontSize={["14px",'18px','32px']}>Expert Faculty</Heading>
+       <Text lineHeight={["20px","30px","30px"]} fontSize={["11px",'18px','18px']} mt="30px" fontWeight={"500"} color={"blackAlpha.700"} >We successfully provide students with intensive courses by India's top faculties and personal mentors. </Text>
       </Box>
       <Box width='70%' height='400px'>
       <MultipleItems2/>
@@ -239,9 +210,9 @@ function Home(){
       <MultipleItems3/>
       </Box>
       <Box  width='45%' height='450px' bg="#f3f8fa" textAlign={"left"}>
-        <Text color={"blue.600"} fontSize={["12px","24px","36px"]} fontWeight={"600"} marginRight={["50px","100px",'200px']} marginLeft={["10px","40px","50px"]} paddingTop={"60px"} >Feedback</Text>
-       <Heading mt="10px" fontSize={["12px","24px","36px"]} marginRight={['30px','100px','200px']} marginLeft={["10px","40px","50px"]} >What students says about us</Heading>
-       <Text lineHeight={["15px","35px","40px"]} mt="10px" fontWeight={"700"} color={"blackAlpha.700"} fontSize={["8px","15px","16px"]}  marginRight={['80px','100px','200px']}   marginLeft={["10px","40px","50px"]} >The data collected from students about their experience in their educational institutes.</Text>
+        <Text color={"blue.600"} fontSize={["12px","24px","36px"]} fontWeight={"600"} marginRight={["50px","100px",'30px']} marginLeft={["30px","40px","50px"]} paddingTop={"60px"} >Feedback</Text>
+       <Heading mt="10px" fontSize={["12px","24px","36px"]} marginRight={['30px','100px','240px',"100px"]} marginLeft={["30px","40px","50px"]} >What students says about us</Heading>
+       <Text lineHeight={["25px","35px","40px"]} mt="10px" fontWeight={"500"} color={"blackAlpha.700"} fontSize={["12px","15px","20px"]}  marginRight={['20px','100px','100px']}   marginLeft={["30px","40px","50px"]} >The data collected from students about their experience in their educational institutes.</Text>
       </Box>
       
       

@@ -1,4 +1,4 @@
-import { AspectRatio } from "@chakra-ui/react";
+import { AspectRatio, Box } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import { Card, CardHeader, CardBody, CardFooter, Image, Stack, Heading, Text, Button } from '@chakra-ui/react';
 import { useNavigate } from "react-router-dom";
@@ -45,8 +45,8 @@ const uniqueObjectsArray = Array.from(uniqueObjectsSet, JSON.parse);
 console.log(uniqueObjectsArray);
 
   return (
-    <div style={{ width: "100vw",paddingLeft:"50px",display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:"100px" }}>
-      {uniqueObjectsArray.map((course, index) => (
+    <div style={{ width: "100vw",height:"100vh",paddingLeft:"50px",display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:"100px" }}>
+      {uniqueObjectsArray.length>0?uniqueObjectsArray.map((course, index) => (
         <div key={index} style={{}}>
           {/* {innerArray.map((course) => ( */}
             <Card
@@ -74,7 +74,13 @@ console.log(uniqueObjectsArray);
             </Card>
           {/* ))} */}
         </div>
-      ))}
+      )):<Box ml="30vw" width={"30vw"} mt="30vh">
+         <Heading fontWeight={"500"}>
+          No Videos Found...
+         </Heading>
+         <Button onClick={()=>navigate("/courses")
+        }>View Courses</Button>
+        </Box>}
     </div>
   );
 }
