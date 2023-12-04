@@ -13,6 +13,7 @@ import {
     Text,
     useColorModeValue,
     Image,
+    Spinner,
   } from '@chakra-ui/react';
   import { useReducer, useState } from 'react';
   import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
@@ -51,10 +52,12 @@ import { useToast } from '@chakra-ui/react'
   export default function SignupCard() {
     const [showPassword, setShowPassword] = useState(false);
     const [state, dispatch]=useReducer(reducer,initialState)
+    const [loading,setLoading]=useState(false)
     const toast=useToast()
     const navigate=useNavigate()
 
     const handleSignin=()=>{
+      setLoading(true)
       axios.post("https://jsonserverrct101.onrender.com/users",state)
       .then(res=>{
         toast({
@@ -64,6 +67,7 @@ import { useToast } from '@chakra-ui/react'
           duration: 9000,
           isClosable: true,
         }) 
+        setLoading(false)
         navigate("/login")})
       .catch(err=>{
         console.log(err)
@@ -142,7 +146,7 @@ import { useToast } from '@chakra-ui/react'
                     bg: 'blue.500',
                   }}
                   onClick={handleSignin}>
-                  Sign up
+                  {loading?<Spinner color="skyblue" zIndex={100}  />:"Sign up"}
                 </Button>
               </Stack>
               <Stack pt={6}>

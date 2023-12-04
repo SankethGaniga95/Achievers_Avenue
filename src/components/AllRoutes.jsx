@@ -28,8 +28,8 @@ return (
         <Route path="/signup" element={<SignupCard/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/cart" element={<PrivateRoute><Cart/></PrivateRoute>} />
-        <Route path="/payment" element={<Payment/>} />
-        <Route path="/view" element={<ViewLectures/>} />
+        <Route path="/payment" element={<PrivateRoute><Payment/></PrivateRoute>} />
+        <Route path="/view" element={<PrivateRoute><ViewLectures/></PrivateRoute>} />
         <Route path="/*" element={<Error/>} />
 
 
