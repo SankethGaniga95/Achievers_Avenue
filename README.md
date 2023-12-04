@@ -49,7 +49,7 @@ This is the deployed link on Netlify: [Achiever's Avenue](https://achieversavenu
 
 ## Contributors
 
-- **Veerangana Malav**
+- **Sanketh Ganiga**
   - GitHub: [Sanketh Ganiga](https://github.com/SankethGaniga95)
 
 ## Support and Issues
